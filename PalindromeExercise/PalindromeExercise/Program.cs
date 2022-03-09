@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PalindromeExercise
 {
-    class Program
+    public class WordSmith
     {
-        static void Main(string[] args)
+        public bool IsAPalindrome(string word)
         {
-            Console.WriteLine("Hello World!");
+            char[] flip = word.ToCharArray();
+            Array.Reverse(flip);
+            string check = new string(flip);
+
+            return check == word;
         }
     }
 }
